@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    
+<form method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+    <div class="container py-5">
+        <table border="3px" align="center" cellpadding="15px" cellmargin="2px">
+            {{data.as_table}}
+        </table>
+        <div class="container py-4" align="center">
+            <button class="btn btn-success" type="submit">Submit</button><br><br>
+            <a class="btn btn-primary " href="{%url  'register'%}">Not registered? Register here!</a>
+            
+        </div>
+        <br><br><br><br><br><br><br><br><br>
+    </div>
+
+</form>
+</body>
+</html>
